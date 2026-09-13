@@ -1,0 +1,26 @@
+Arduino `.ino` procedure for VS Code
+
+1. Open the folder that contains the `.ino` file in VS Code. Keep the sketch file in that folder; for this project it is `Blink.ino`.
+2. Install the Arduino Community Edition extension if it is not already installed.
+3. Press `Ctrl+Shift+P`, run `Arduino: Board Manager`, and install the core for the board:
+	- Uno, Nano, or Mega: install `Arduino AVR Boards`.
+	- ESP32 or ESP8266: add the vendor board URL in the `arduino.additionalUrls` setting, then install the matching core from Board Manager.
+4. Install required libraries with `Ctrl+Shift+P` -> `Arduino: Library Manager`.
+5. Connect the Arduino board by USB.
+6. Select the board with the status bar, or run `Arduino: Change Board Type` from the Command Palette.
+7. Select the USB port with the status bar, or run `Arduino: Select Serial Port`.
+8. Set board-specific options such as processor variant or upload speed with `Arduino: Board Config`.
+	These selections are stored in `.vscode/arduino.json`.
+9. Open the `.ino` file and press `Ctrl+Alt+R` to verify (compile). You can also run `Arduino: Verify` from the Command Palette.
+10. If verification succeeds but IntelliSense still shows red squiggles, run verify once more. Verification regenerates `c_cpp_properties.json` with the correct include paths.
+11. Upload the compiled sketch with `Ctrl+Alt+U`, or run `Arduino: Upload` from the Command Palette.
+12. To view serial output, run `Arduino: Open Serial Monitor` and use the baud rate expected by the sketch.
+
+Repeatable workflow for another `.ino` file:
+
+1. Open its containing folder in VS Code.
+2. Select the board and serial port.
+3. Run `Arduino: Verify` (`Ctrl+Alt+R`).
+4. Fix any compile errors and verify again.
+5. Run `Arduino: Upload` (`Ctrl+Alt+U`).
+6. Open `Arduino: Open Serial Monitor` when the sketch communicates over serial.

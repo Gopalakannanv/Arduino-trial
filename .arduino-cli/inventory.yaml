@@ -1,0 +1,9 @@
+cache:
+    api2:
+        arduino:
+            cc/boards/v1/boards?vid-pid=0x1a86-0x7523:
+                data: '[]'
+                ts: 2026-09-13T13:03:34.9451941+05:30
+installation:
+    id: ddc00c74-c9d9-4e28-aa54-6b12d9b20eaa
+    secret: 14fb1b54-ae7f-4bf4-87b7-7d326abd3c30
